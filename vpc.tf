@@ -1,3 +1,9 @@
+
+module "network" {
+  source  = "app.terraform.io/Haiashinsu/network/google"
+  version = "3.4.0"
+  network_name = "haia-network"
+  project_id = var.project
 subnets = [
   {
     subnet_name   = "haia-subnet"
@@ -5,3 +11,6 @@ subnets = [
     subnet_region = var.region
   }
 ]
+}
+
+
